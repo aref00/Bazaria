@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_sign_up"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.picha.bazaria.UI.Activities.SignUp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dark_gray"
+        android:weightSum="3"
+        android:id="@+id/linearLayout2">
+
+        <Button
+            android:id="@+id/rule_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Rules"
+            android:background="@android:color/holo_blue_dark"/>
+
+        <Button
+            android:id="@+id/sign_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SignUp"
+            android:background="@color/dark_gray"/>
+
+        <Button
+            android:id="@+id/intro_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Intro"
+            android:background="@color/dark_gray"/>
+
+
+    </LinearLayout>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/signUpPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linearLayout2">
+
+        <RelativeLayout
+            android:id="@+id/u_page_0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_margin="32dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="22dp"
+                android:text="There is something you should agree to use our free app : "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:layout_margin="20dp"
+                android:text="@string/rule"/>
+            <Button
+                android:onClick="agreeToRules"
+                android:layout_alignParentBottom="true"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@string/i_agree"
+                android:background="@android:color/holo_blue_dark"/>
+
+        </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/u_page_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/up_avatar"
+                    android:layout_marginTop="59dp"
+                    android:src="@drawable/camera"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:onClick="browse"/>
+
+                <EditText
+                    android:maxLines="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/up_name"
+                    android:layout_marginTop="56dp"
+                    android:background="@color/white"
+                    android:layout_below="@+id/up_avatar"
+                    android:layout_alignStart="@+id/up_avatar"
+                    android:textColor="@color/dark_gray"/>
+
+                <EditText
+                    android:maxLines="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/up_username"
+                    android:layout_below="@+id/up_name"
+                    android:layout_alignStart="@+id/up_name"
+                    android:layout_marginTop="44dp"
+                    android:layout_alignEnd="@+id/up_name"
+                    android:background="@color/white"
+                    android:textColor="@color/dark_gray"/>
+
+                <EditText
+                    android:maxLines="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:ems="10"
+                    android:id="@+id/up_email"
+                    android:layout_below="@+id/up_username"
+                    android:layout_alignStart="@+id/up_username"
+                    android:layout_marginTop="31dp"
+                    android:layout_alignEnd="@+id/up_username"
+                    android:background="@color/white"
+                    android:textColor="@color/dark_gray"/>
+
+                <EditText
+                    android:maxLines="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:ems="10"
+                    android:id="@+id/up_password"
+                    android:layout_below="@+id/up_email"
+                    android:layout_alignStart="@+id/up_email"
+                    android:layout_marginTop="40dp"
+                    android:background="@color/white"
+                    android:layout_alignEnd="@+id/up_email"
+                    android:textColor="@color/dark_gray"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:id="@+id/textView"
+                    android:layout_alignBottom="@+id/up_name"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="33dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Username"
+                    android:id="@+id/textView2"
+                    android:layout_alignBottom="@+id/up_username"
+                    android:layout_alignStart="@+id/textView"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:id="@+id/textView3"
+                    android:layout_alignTop="@+id/up_email"
+                    android:layout_alignStart="@+id/textView2"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Password"
+                    android:id="@+id/textView4"
+                    android:layout_alignBottom="@+id/up_password"
+                    android:layout_alignStart="@+id/textView3"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Confirm"
+                    android:id="@+id/up_confirm"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@android:color/holo_blue_dark"
+                    android:onClick="confirmSignUp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/u_page_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:text="Got It"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+        </RelativeLayout>
+
+    </android.support.v4.view.ViewPager>
+
+</RelativeLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="2"
+    android:background="@android:color/black"
+    android:baselineAligned="false"
+    >
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/first"
+            android:layout_width="wrap_content"
+            android:contentDescription="@string/left_image"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"/>
+
+
+        <!--Views And Like-->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#aa555555">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical|start"
+                    android:maxLines="1"
+                    android:gravity="center"
+                    android:text="123"
+                    android:drawableStart="@android:drawable/ic_menu_view"
+                    android:id="@+id/leftve"/>
+                <com.github.ivbaranov.mfb.MaterialFavoriteButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:mfb_animate_favorite="true"
+                    app:mfb_animate_unfavorite="true"
+                    app:mfb_rotation_duration="400"
+                    app:mfb_rotation_angle="360"
+                    app:mfb_bounce_duration="300"
+                    android:layout_gravity="end"
+                    app:mfb_color="white"
+                    app:mfb_type="star"/>
+        </FrameLayout>
+
+
+
+
+
+    </FrameLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="1dp"
+        android:layout_weight="0"
+        android:background="#000000"
+        android:layout_height="fill_parent"/>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/second"
+            android:layout_width="wrap_content"
+            android:contentDescription="@string/right_image"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            />
+        <!--Views And Like-->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#aa555555">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|start"
+                android:drawableStart="@android:drawable/ic_menu_view"
+                android:maxLines="1"
+                android:gravity="center"
+                android:text="123"
+                android:id="@+id/rightve"/>
+
+            <com.github.ivbaranov.mfb.MaterialFavoriteButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:mfb_animate_favorite="true"
+                app:mfb_animate_unfavorite="true"
+                app:mfb_rotation_duration="400"
+                app:mfb_rotation_angle="360"
+                app:mfb_bounce_duration="300"
+                android:layout_gravity="end"
+                app:mfb_color="white"
+                app:mfb_type="star"/>
+        </FrameLayout>
+
+    </FrameLayout>
+
+</LinearLayout>
+    
+    
+
