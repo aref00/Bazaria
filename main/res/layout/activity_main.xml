@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+-<LinearLayout android:layout_height="match_parent" android:layout_width="match_parent" android:orientation="vertical" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+-<android.support.v4.widget.DrawerLayout android:layout_height="0dp" android:layout_width="match_parent" android:layout_weight="1" android:layout_gravity="start" android:id="@+id/drawer_layout">
+
+
+-<LinearLayout android:layout_height="match_parent" android:layout_width="match_parent" android:orientation="vertical">
+
+<!--actionBar{-->
+
+
+
+-<FrameLayout android:layout_height="100dp" android:layout_width="match_parent" android:orientation="horizontal" android:background="@color/dark_gray">
+
+<com.arlib.floatingsearchview.FloatingSearchView android:layout_height="match_parent" android:layout_width="match_parent" android:layout_gravity="end" android:id="@+id/floating_search_view" app:floatingSearch_close_search_on_keyboard_dismiss="true" app:floatingSearch_actionMenuOverflowColor="@color/transparent" app:floatingSearch_backgroundColor="@color/transparent" app:floatingSearch_leftActionMode="showHamburger" app:floatingSearch_viewTextColor="#ffffff" app:floatingSearch_showSearchKey="true" app:floatingSearch_suggestionsListAnimDuration="250" app:floatingSearch_searchHint="Search..." app:floatingSearch_searchBarMarginRight="@dimen/search_view_inset" app:floatingSearch_searchBarMarginTop="@dimen/search_view_inset" app:floatingSearch_searchBarMarginLeft="@dimen/search_view_inset"/>
+
+<it.neokree.materialtabs.MaterialTabHost android:layout_height="40dp" android:layout_width="match_parent" android:layout_gravity="bottom|center" android:id="@+id/materialTabHost" app:hasIcons="true" app:materialTabsPrimaryColor="@color/transparent"/>
+
+<!--<com.gigamole.navigationtabstrip.NavigationTabStrip android:layout_width="match_parent" android:layout_height="50dp" android:layout_gravity="bottom|center" android:id="@+id/nts"/>-->
+
+
+</FrameLayout>
+
+<com.picha.bazaria.UI.PichaViewPager android:layout_height="match_parent" android:layout_width="match_parent" android:id="@+id/viewPager"/>
+
+</LinearLayout>
+
+
+-<LinearLayout android:layout_height="match_parent" android:layout_width="240dp" android:orientation="vertical" android:layout_gravity="start" android:id="@+id/drawer_content" android:background="@color/darker_gray" android:textColor="@color/light_gray" android:gravity="center">
+
+<include layout="@layout/m_drwer_layout"/>
+
+</LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>
+
+</LinearLayout>
